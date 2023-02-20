@@ -13,6 +13,10 @@
     }
 }
 
+.App-left {
+    text-align: left;
+}
+
 .App-box {
     width: 20px;
     height: 20px;

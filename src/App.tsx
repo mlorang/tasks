@@ -25,7 +25,7 @@ function App(): JSX.Element {
                         <Col>
                             <div className="App-box"></div>
                             Some fun facts about me
-                            <ul>
+                            <ul className="App-left">
                                 <li>I am the one who knocks</li>
                                 <li>I love exercising</li>
                                 <li>
