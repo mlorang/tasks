@@ -1,3 +1,5 @@
+import { exit } from "process";
+
 /**
  * Consume an array of numbers, and return a new array containing
  * JUST the first and last number. If there are no elements, return
@@ -129,5 +131,20 @@ export function makeMath(addends: number[]): string {
  * And the array [1, 9, 7] would become [1, 9, 7, 17]
  */
 export function injectPositive(values: number[]): number[] {
-    return [];
+    let sum = 0;
+    let sum2 = 0;
+    const negativeIndex = values.findIndex((num: number): boolean => num < 0);
+    console.log(negativeIndex);
+    if (negativeIndex === -1) {
+        values.map((num: number): number => (sum += num));
+        const final = [...values, sum];
+        console.log(final);
+        return final;
+    }
+    values.map((val: number): number =>
+        val > 0 ? (sum += val) : (sum2 = sum)
+    );
+    const valuesCopy = [...values];
+    valuesCopy.splice(negativeIndex + 1, 0, sum2);
+    return valuesCopy;
 }
