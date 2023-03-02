@@ -61,7 +61,6 @@ export const removeDollars = (amounts: string[]): number[] => {
  * in question marks ("?").
  */
 export const shoutIfExclaiming = (messages: string[]): string[] => {
-    let final: string[];
     const removeExclamation = messages.map((str: string): string =>
         str.charAt(str.length - 1) === "!" ? str.toUpperCase() : str
     );
@@ -76,7 +75,9 @@ export const shoutIfExclaiming = (messages: string[]): string[] => {
  * 4 letters long.
  */
 export function countShortWords(words: string[]): number {
-    return 0;
+    let count = 0;
+    words.map((str: string): number => (str.length < 4 ? ++count : 0));
+    return count;
 }
 
 /**
@@ -85,6 +86,17 @@ export function countShortWords(words: string[]): number {
  * then return true.
  */
 export function allRGB(colors: string[]): boolean {
+    const len: number = colors.length;
+    if (len === 0) {
+        return true;
+    }
+    let count = 0;
+    colors.map((str: string): number =>
+        str === "red" || str === "blue" || str === "green" ? ++count : 0
+    );
+    if (count === len) {
+        return true;
+    }
     return false;
 }
 
@@ -96,7 +108,15 @@ export function allRGB(colors: string[]): boolean {
  * And the array [] would become "0=0".
  */
 export function makeMath(addends: number[]): string {
-    return "";
+    let sum = 0;
+    if (addends.length === 0) {
+        return "0=0";
+    }
+    const str: string[] = [];
+    addends.map((val: number): number => (sum += val));
+    str[0] = sum.toString() + "=";
+    str[1] = addends.join("+");
+    return str.toString().replace(",", "");
 }
 
 /**
