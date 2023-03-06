@@ -133,7 +133,7 @@ export function duplicateQuestion(id: number, oldQuestion: Question): Question {
         name: "Copy of " + oldQuestion.name,
         published: false
     };
-    console.log(newQuestion.name);
+    //console.log(newQuestion.name);
     return newQuestion;
 }
 
