@@ -13,7 +13,18 @@ export function d6(): number {
 }
 
 export function TwoDice(): JSX.Element {
-    const [d1, setD1] = useState<number>(d6);
-    const [d2, setD2] = useState<number>(d6);
-    return <div>Two Dice</div>;
+    const [d1, setD1] = useState<number>(1);
+    const [d2, setD2] = useState<number>(6);
+    return (
+        <div>
+            Two Dice
+            <span data-testid="left-die">
+                <Button onClick={() => setD1(d6)}>Roll Left = {d1}</Button>
+            </span>
+            <span data-testid="right-die">
+                <Button onClick={() => setD2(d6)}>Roll Right = {d2}</Button>
+            </span>
+            <div>{d1 === 1 && d2 === 1 ? "Lose" : "Win"}</div>
+        </div>
+    );
 }
