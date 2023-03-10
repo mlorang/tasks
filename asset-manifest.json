@@ -1,16 +1,15 @@
 {
   "files": {
     "main.css": "/tasks/static/css/main.53b8a8d2.css",
-    "main.js": "/tasks/static/js/main.f53cec87.js",
+    "main.js": "/tasks/static/js/main.0e604710.js",
     "static/js/787.4ef7427d.chunk.js": "/tasks/static/js/787.4ef7427d.chunk.js",
-    "static/media/Moon River copy.png": "/tasks/static/media/Moon River copy.cb09ec55ffe222e3fbc4.png",
     "index.html": "/tasks/index.html",
     "main.53b8a8d2.css.map": "/tasks/static/css/main.53b8a8d2.css.map",
-    "main.f53cec87.js.map": "/tasks/static/js/main.f53cec87.js.map",
+    "main.0e604710.js.map": "/tasks/static/js/main.0e604710.js.map",
     "787.4ef7427d.chunk.js.map": "/tasks/static/js/787.4ef7427d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.53b8a8d2.css",
-    "static/js/main.f53cec87.js"
+    "static/js/main.0e604710.js"
   ]
 }
